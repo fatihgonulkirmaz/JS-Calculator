@@ -1,0 +1,66 @@
+* {
+    margin:0; /* boşluğu belli eder */
+    padding:0; /* ögelerin iç dolgusunu sıfırlar */
+    box-sizing : border-box;/* öğelerin genişlik ve yükseklik hesaplamalarını iç içe kutu modeline göre yapar. Yani, kenarlık (border) ve dolgu (padding) değerleri öğenin boyutlarına dahil edilir. */
+}
+
+html {
+    font-size:10px; 
+}
+
+body{
+    font-size:1.2rem;/*sayfa içeriğinin yazı tipi boyutunu 1.2 em (em, ebeveyn öğenin yazı tipi boyutunu temsil eden bir birim) olarak ayarlar. Bu, sayfa içeriğinin belirli bir oranda (1.2 kat) büyümesini sağlar. */
+}
+.calculator {
+    border: 1px solid SlateBlue;
+    border-radius: 5px; /* öğenin kenar köşelerini 5 piksel yarıçaplı yuvarlatır.*/
+    width:400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+.calculator-input {
+    width: 100%; /*genişliği*/
+    font-size: 4rem; /*girilen eleman*/
+    height: 70px; /*yükseklik*/
+    border: none;
+    background-color:gray;
+    color:#fff; /*içindeki yazı*/
+    text-align: right; /*girilen sayılar sağ tarafta*/
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+button{
+    height:50px;
+    background-color: #fff;
+    border-radius: 3px; /*köşeler için kullanılır*/
+    border :1px solid #c4c4c4;
+    background-color: transparent;
+    
+}
+
+button:hover{ /*buttonların üstündeki renk*/
+    background-color:LightGray ;
+}
+
+.clear{ /*temizle butonuna renk verdik*/
+    background-color: red;
+    color:#fff;
+
+}
+
+.esittir{
+    background-color:#4e9ed4;
+    color:#fff;
+    height: 100%;
+    grid-area : 2/4/6/5; /*2.satır 4.kolana yerleştir*/
+    
+    
+}
+.calculator-keys {
+    display: grid; /* Düğmeleri konumlandırmak için grid (ızgara) düzenini kullanır */
+    grid-template-columns: repeat(4, 25%); /* 4 sütunlu ve sütunların genişlikleri %25 olarak tanımlanmış */
+  }
+  
+    
